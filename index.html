@@ -1,40 +1,77 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Abaixa.AI - Um app contra a poluição sonora</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Abaixa.AI – Contra a Poluição Sonora</title>
   <style>
-    body {
-      font-family: "Segoe UI", sans-serif;
+    :root {
+      --primary: #005f73;
+      --secondary: #0a9396;
+      --light: #f9f9f9;
+      --dark: #333;
+    }
+    * {
       margin: 0;
       padding: 0;
-      background-color: #f9f9f9;
-      color: #333;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--light);
+      color: var(--dark);
+      line-height: 1.6;
     }
     header {
-      background-color: #005f73;
+      background-color: var(--primary);
       color: white;
-      padding: 2rem;
+      padding: 2rem 1rem;
       text-align: center;
     }
-    main {
-      padding: 2rem;
-      max-width: 900px;
-      margin: auto;
+    nav {
+      background-color: var(--secondary);
+      padding: 0.5rem 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
-    h1, h2 {
-      color: #0a9396;
+    nav a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    section {
+      margin-bottom: 3rem;
+    }
+    h2 {
+      color: var(--secondary);
+      border-left: 5px solid var(--primary);
+      padding-left: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    ul {
+      list-style: inside disc;
+    }
+    .highlight {
+      background-color: #e0f2f1;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-bottom: 1rem;
     }
     footer {
-      background-color: #005f73;
+      background-color: var(--primary);
       color: white;
       text-align: center;
       padding: 1rem;
-      margin-top: 2rem;
-    }
-    .section {
-      margin-bottom: 2rem;
     }
   </style>
 </head>
@@ -42,61 +79,109 @@
 
 <header>
   <h1>Abaixa.AI</h1>
-  <p>Um app para mapear e combater a poluição sonora nas cidades</p>
+  <p>Mapeamento colaborativo da poluição sonora urbana</p>
 </header>
 
+<nav>
+  <a href="#sobre">Sobre</a>
+  <a href="#objetivos">Objetivos</a>
+  <a href="#ods">ODS</a>
+  <a href="#funcionalidades">Funcionalidades</a>
+  <a href="#tecnologia">Tecnologia</a>
+  <a href="#metodologia">Metodologia</a>
+  <a href="#cronograma">Cronograma</a>
+  <a href="#avaliacao">Avaliação</a>
+  <a href="#equipe">Equipe</a>
+</nav>
+
 <main>
-  <section class="section">
+
+  <section id="sobre">
     <h2>📱 Sobre o Projeto</h2>
-    <p><strong>Abaixa.AI</strong> é um aplicativo criado por estudantes da UFF para transformar o celular em uma ferramenta de resistência ao barulho urbano. O app permite medir ruídos em tempo real, mapear locais mais barulhentos e conscientizar a população sobre os riscos da poluição sonora.</p>
+    <p>
+      O <strong>Abaixa.AI</strong> é um aplicativo desenvolvido por estudantes da Universidade Federal Fluminense (UFF) para empoderar cidadãos na luta contra a poluição sonora urbana. Utilizando sensores do próprio celular, o app mede ruídos, gera mapas colaborativos em tempo real e oferece ferramentas de alerta e conscientização.
+    </p>
+    <div class="highlight">
+      <strong>Vigência:</strong> 31/03/2025 a 26/07/2025<br>
+      <strong>Abrangência:</strong> Regional (UFF e comunidade externa)
+    </div>
   </section>
 
-  <section class="section">
+  <section id="objetivos">
     <h2>🎯 Objetivos</h2>
     <ul>
-      <li>Mapear e medir sistematicamente a poluição sonora.</li>
-      <li>Capacitar usuários a reportar ruídos excessivos.</li>
-      <li>Apoiar pessoas com hipersensibilidade auditiva.</li>
-      <li>Transformar dados em ações coletivas por cidades mais silenciosas.</li>
+      <li>Mapear e medir sistematicamente a poluição sonora urbana.</li>
+      <li>Gerar alertas em tempo real sobre ruídos em níveis nocivos à saúde.</li>
+      <li>Promover ações educativas e engajamento cidadão.</li>
+      <li>Apoiar pessoas com hipersensibilidade auditiva (autistas, idosos, etc.).</li>
+      <li>Transformar dados em políticas públicas com base em ciência cidadã.</li>
     </ul>
   </section>
 
-  <section class="section">
-    <h2>🧠 Fundamentação</h2>
-    <p>A poluição sonora impacta a saúde mental e física, mas raramente é tratada como prioridade. O Abaixa.AI propõe uma abordagem cidadã, utilizando smartphones para gerar dados colaborativos sobre o som ambiente, promovendo uma cultura de escuta consciente.</p>
-  </section>
-
-  <section class="section">
-    <h2>⚙️ Como Funciona</h2>
+  <section id="ods">
+    <h2>🌍 Objetivos de Desenvolvimento Sustentável (ODS)</h2>
     <ul>
-      <li>📊 Mede o nível de ruído com o microfone do celular.</li>
-      <li>🗺️ Mostra em tempo real no mapa onde os níveis estão elevados.</li>
-      <li>🔔 Envia alertas inteligentes quando os limites são ultrapassados.</li>
-      <li>👤 Possui modo anônimo e respeita a LGPD.</li>
+      <li>3 – Saúde e bem-estar</li>
+      <li>9 – Indústria, inovação e infraestrutura</li>
+      <li>11 – Cidades e comunidades sustentáveis</li>
+      <li>13 – Ação contra a mudança global do clima</li>
+      <li>18 – Igualdade étnico-racial</li>
     </ul>
   </section>
 
-  <section class="section">
-    <h2>🛠️ Tecnologias Utilizadas</h2>
+  <section id="funcionalidades">
+    <h2>⚙️ Funcionalidades do App</h2>
     <ul>
-      <li>Flutter (desenvolvimento multiplataforma)</li>
-      <li>Firebase (backend e autenticação)</li>
-      <li>Figma (prototipação)</li>
-      <li>Trello (gestão ágil com Kanban)</li>
+      <li>Medição de ruído em decibéis (dB) com microfone do celular.</li>
+      <li>Mapeamento em tempo real com geolocalização.</li>
+      <li>Alertas automáticos por hora/local.</li>
+      <li>Modo anônimo e respeito à LGPD.</li>
+      <li>Visualização de gráficos e dados históricos.</li>
     </ul>
   </section>
 
-  <section class="section">
+  <section id="tecnologia">
+    <h2>💻 Tecnologias Utilizadas</h2>
+    <ul>
+      <li><strong>Flutter:</strong> desenvolvimento multiplataforma (Android, iOS, Web)</li>
+      <li><strong>Firebase:</strong> autenticação e backend</li>
+      <li><strong>Figma:</strong> prototipação de interfaces</li>
+      <li><strong>Trello:</strong> gestão de tarefas com metodologia ágil (Kanban)</li>
+    </ul>
+  </section>
+
+  <section id="metodologia">
+    <h2>🧪 Metodologia</h2>
+    <p>
+      A construção do app segue práticas modernas de desenvolvimento ágil, com foco em Design Centrado no Usuário. O projeto busca garantir usabilidade e acessibilidade, com testes constantes e ajustes baseados em feedback real.
+    </p>
+    <div class="highlight">
+      <strong>Práticas aplicadas:</strong> Scrum, Kanban, testes com usuários, prototipação iterativa.
+    </div>
+  </section>
+
+  <section id="cronograma">
     <h2>📅 Cronograma</h2>
     <ul>
-      <li><strong>Abril:</strong> Pesquisa e prototipação.</li>
-      <li><strong>Maio:</strong> Validação e início do desenvolvimento.</li>
-      <li><strong>Junho:</strong> Implementação de alertas e testes internos.</li>
-      <li><strong>Julho:</strong> Testes externos e divulgação.</li>
+      <li><strong>Abril:</strong> Pesquisas, requisitos, início dos protótipos.</li>
+      <li><strong>Maio:</strong> Validação de protótipos e início da codificação.</li>
+      <li><strong>Junho:</strong> Desenvolvimento de alertas e testes internos.</li>
+      <li><strong>Julho:</strong> Testes externos, ajustes finais e lançamento público.</li>
     </ul>
   </section>
 
-  <section class="section">
+  <section id="avaliacao">
+    <h2>📈 Avaliação de Impacto</h2>
+    <p>O sucesso do projeto será medido por indicadores como:</p>
+    <ul>
+      <li>Número de medições realizadas pelos usuários</li>
+      <li>Distribuição geográfica dos registros de ruído</li>
+      <li>Crescimento do número de usuários ativos</li>
+      <li>Acessos à aba educativa do app</li>
+    </ul>
+  </section>
+
+  <section id="equipe">
     <h2>👥 Equipe</h2>
     <ul>
       <li>Gabriel Gomes Gonçalves</li>
@@ -108,19 +193,10 @@
     </ul>
   </section>
 
-  <section class="section">
-    <h2>📚 Referências</h2>
-    <ul>
-      <li><a href="https://docs.flutter.dev" target="_blank">Flutter Documentation</a></li>
-      <li><a href="https://scrumguides.org" target="_blank">Guia do Scrum</a></li>
-      <li><a href="https://www.drsilencio.com.br/poluicao-sonora-como-pode-afetar-sua-qualidade-de-vida/" target="_blank">Dr. Silêncio</a></li>
-      <li><a href="https://www.iberdrola.com/sustentabilidade/o-que-e-poluicao-sonora-causas-consequencias-solucoes" target="_blank">Iberdrola</a></li>
-    </ul>
-  </section>
 </main>
 
 <footer>
-  <p>&copy; 2025 Abaixa.AI | Projeto de Extensão - UFF</p>
+  <p>&copy; 2025 Abaixa.AI – Projeto de Extensão | Universidade Federal Fluminense</p>
 </footer>
 
 </body>
